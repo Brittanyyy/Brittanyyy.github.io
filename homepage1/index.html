@@ -106,11 +106,34 @@
             </div>
             <div class="block">
                 <h3>Awards</h3>
-                <ul>
-                    <li>Awarded the first prize in Enactus World Cup Hong Kong Religion</li>
-                    <li>Awarded the third prize in Enactus World Cup China Religion</li>
-                    <li>Awarded "Excellent Exchange Student" of Communication University of China</li>
-                </ul>
+                <p id="content">
+                    Awards
+                <script>
+                        experience = [{
+                            'time': '2017.02',
+                            'awards': 'The first prize in Eactus World Cup Hong Kong Religion'
+                        }, {
+                            'time': '2017.05',
+                            'awards': 'The third prize in Enactus China World Cup '
+                        }, {
+                            'time': '2017.06',
+                            'awards': '"Excellent Exchange Student" of Communication University of China'
+                        }]
+                        o = document.getElementById('content')
+
+                        allItemString = ''
+                            //o.innerHTML = '<ul><li>Item 1</li><li>Item 2</li></ul>'
+                        for (i = 0; i < experience.length; i++) {
+                            console.log(i)
+                            itemString = '<li>' +
+                                experience[i]['time'] +
+                                ',' + experience[i]['awards'] + ',' + '</li>'
+                            allItemString = allItemString + itemString
+                        }
+                        itemString = '<li>' + experience[0]['time'] + ',' + experience[0]['awards'] + ',' + '</li>'
+                        o.innerHTML = '<ul>' + allItemString + '</ul>'
+                            // console.log('it works')
+                    </script>
             </div>
         </div>
 
